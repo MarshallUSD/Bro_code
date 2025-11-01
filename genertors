@@ -1,0 +1,42 @@
+def numbers():
+  print("step 1")
+  yield 1
+  print("step 2")
+  yeild 2
+  print("step 3")
+  yeild 3
+
+gen=numbers()
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+
+"""""
+def kvads():
+    for x in range(1_000_000):
+        yield x*x
+    for kv in kvads():
+        if kv>100:
+            break
+        print(kv)
+
+
+
+gen=kvads()
+print(gen)
+"""
+
+
+
+def fibo():
+ a,b=0,1
+ while True:
+   yield a
+   a,b=b,b+a
+for i,f in enumerate(fibo())
+  if i>10:
+   break
+   print(f)
+
